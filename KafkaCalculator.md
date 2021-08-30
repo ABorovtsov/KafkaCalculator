@@ -1,9 +1,13 @@
 ﻿# ToDo
 
+- add readme
 - SEO
-- add counters
 - notifications
+- UX: comments
+- add more functionality
+- add blazor version
 
++ add counters
 + result report
 + Improve calculations
 + Improve UX (advanced)
