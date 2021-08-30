@@ -1,8 +1,6 @@
 ﻿# ToDo
 
-- GitHub
-
-- searchability
+- SEO
 - add counters
 - notifications
 
@@ -11,3 +9,5 @@
 + Improve UX (advanced)
 + Get domain name
 + Host somewhere
++ GitHub
++ validation of values in the form
