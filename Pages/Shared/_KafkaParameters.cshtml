@@ -1,0 +1,39 @@
+﻿@model KafkaCalculator.Model.KafkaParameters
+@{
+}
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TargetThroughput)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TargetThroughput)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ProducerThroughput)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProducerThroughput)
+        </dd>
+        
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ConsumerThroughput)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ConsumerThroughput)
+        </dd>
+        
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NumberOfBrokers)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NumberOfBrokers)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ReplicationFactor)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ReplicationFactor)
+        </dd>
+    </dl>

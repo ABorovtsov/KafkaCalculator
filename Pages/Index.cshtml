@@ -1,0 +1,30 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+@{
+    if (ViewData.ContainsKey("NumberOfPartitions"))
+    {
+        <h2>Recommended Number Of Partitions Per Topic</h2>
+        <p>@ViewData["NumberOfPartitions"]</p>
+
+        if (ViewData.ContainsKey("MaxNumberOfPartitionsPerBroker"))
+        {
+            <h2>Maximum Number Of Partitions Per Broker</h2>
+            <p>@ViewData["MaxNumberOfPartitionsPerBroker"]</p>
+        }
+        <hr />
+        <partial name="shared/_kafkaparameters" model="Model.KafkaParameters" />
+    }
+    else
+    {
+        <h2>Calculate the number partitions</h2>
+        <hr />
+        <partial name="shared/_kafkaparametersEdit" model="Model.KafkaParameters" />
+    }
+}
+
+<hr />
+<p>Learn more <a href="https://www.confluent.io/blog/how-choose-number-topics-partitions-kafka-cluster/">how to choose the number of topics/partitions in a Kafka cluster</a>.</p>

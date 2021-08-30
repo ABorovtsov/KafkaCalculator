@@ -1,0 +1,50 @@
+﻿@model KafkaCalculator.Model.KafkaParameters
+@{
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" asp-asp-page="./report">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group required">
+                <label asp-for="TargetThroughput" class="control-label"></label>
+                <input asp-for="TargetThroughput" class="form-control" />
+                <span asp-validation-for="TargetThroughput" class="text-danger"></span>
+            </div>
+            <div class="form-group required">
+                <label asp-for="ProducerThroughput" class="control-label"></label>
+                <input asp-for="ProducerThroughput" class="form-control" />
+                <span asp-validation-for="ProducerThroughput" class="text-danger"></span>
+            </div>
+            <div class="form-group required">
+                <label asp-for="ConsumerThroughput" class="control-label"></label>
+                <input asp-for="ConsumerThroughput" class="form-control"/>
+                <span asp-validation-for="ConsumerThroughput" class="text-danger"></span>
+            </div>
+
+            <p>
+                <a class="btn btn-secondary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                Advanced parameters
+                </a>
+            </p>
+            <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                    <div class="form-group">
+                        <label asp-for="NumberOfBrokers" class="control-label"></label>
+                        <input asp-for="NumberOfBrokers" class="form-control" value="0" />
+                        <span asp-validation-for="NumberOfBrokers" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ReplicationFactor" class="control-label"></label>
+                        <input asp-for="ReplicationFactor" class="form-control" value="0" />
+                        <span asp-validation-for="ReplicationFactor" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Calculate" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
